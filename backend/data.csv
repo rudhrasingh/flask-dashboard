@@ -1,0 +1,5 @@
+25-APR-2020,INT0030,file_1,CORT_1,Stage load,,STG,0,COMPLETED,message1
+25-APR-2020,INT0050,file_2,CORT_2,Stage load,,TRN,0,FAILURE,message2
+25-APR-2020,INT0060,file_3,CORT_3,Stage load,,STG,0,STARTED,message3
+25-APR-2020,INT0070,file_4,CORT_4,Stage load,,TRN,0,COMPLETED,message4
+25-APR-2020,INT0080,file_5,CORT_5,Stage load,,STG,0,COMPLETED,message5
