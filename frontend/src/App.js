@@ -36,6 +36,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+// Function starts here
 function App() {
   const classes = useStyles();
 
@@ -84,6 +85,10 @@ function App() {
   };
 
   const [records, setRecords] = useState([]);
+  const [dropdownData, setDropdownData] = useState({
+    application_list : [],
+    dataset_list: []
+  });
 
   async function fetchData() {
     const requestData = {
@@ -96,11 +101,16 @@ function App() {
         dataset : state.dataset
       })
     };
-
+    alert(requestData.body)
     const res = await fetch("/dashboard", requestData);
     const all_data = await res.json();
     let all_rows = [];
     const data = all_data["dashboard_data"];
+    setDropdownData({
+      application_list : all_data["dropdown_data"]["application_list"],
+      dataset_list: all_data["dropdown_data"]["application_list"]
+    });
+
     data.map((row) => {
       let to_insert_row = [
         row.date,
@@ -124,10 +134,6 @@ function App() {
     fetchData();
   }, []);
 
-  // const fetchRecords = () => {
-
-
-  // }
 
   return (
     <Container maxWidth="xl">
@@ -182,9 +188,12 @@ function App() {
                       onChange={handleChange("application")}
                       name="application"
                     >
-                      <MenuItem value={10}>Ten</MenuItem>
-                      <MenuItem value={20}>Twenty</MenuItem>
-                      <MenuItem value={30}>Thirty</MenuItem>
+                      <MenuItem value=""><em>None</em></MenuItem>
+                      {
+                        dropdownData["application_list"].map((item, key) =>
+                          <MenuItem id={key} value={item}>{item}</MenuItem>
+                        )
+                      }
                     </Select>
                     </FormControl>
                   {/* Dataset */}
@@ -197,9 +206,12 @@ function App() {
                       onChange={handleChange("dataset")}
                       name="dataset"
                     >
-                      <MenuItem value={10}>Ten</MenuItem>
-                      <MenuItem value={20}>Twenty</MenuItem>
-                      <MenuItem value={30}>Thirty</MenuItem>
+                      <MenuItem value=""><em>None</em></MenuItem>
+                      {
+                        dropdownData["dataset_list"].map((item, key) =>
+                          <MenuItem id={key} value={item}>{item}</MenuItem>
+                        )
+                      }
                     </Select>
                   </FormControl>
 
