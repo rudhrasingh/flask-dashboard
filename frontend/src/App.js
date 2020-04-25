@@ -6,7 +6,6 @@ import {
   MuiPickersUtilsProvider,
   KeyboardDatePicker,
 } from "@material-ui/pickers";
-import PageviewIcon from "@material-ui/icons/Pageview";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
 import InputLabel from "@material-ui/core/InputLabel";
@@ -53,16 +52,18 @@ function App() {
   };
 
   // Date picker
-  const [selectedDate, setSelectedDate] = React.useState(
-    new Date("2014-08-18T21:11:54")
+  const [fromDate, setFromDate] = React.useState(
+    new Date(new Date(Date.now()))
   );
-  const handleDateChange = (date) => {
-    setSelectedDate(date);
+  const [toDate, setToDate] = React.useState(
+    new Date(new Date(Date.now() - 30 * 24 * 60 * 60 * 1000))
+  );
+  const handleToDateChange = (date) => {
+    setToDate(date);
   };
-
-  // Select
-  const [age, setAge] = React.useState("");
-
+  const handleFromDateChange = (date) => {
+    setFromDate(date);
+  };
 
   //Table
   const columns = [
@@ -86,8 +87,9 @@ function App() {
 
   async function fetchData() {
     const res = await fetch("/dashboard");
-    const data = await res.json();
+    const all_data = await res.json();
     let all_rows = [];
+    const data = all_data["dashboard_data"];
     data.map((row) => {
       let to_insert_row = [
         row.date,
@@ -110,6 +112,15 @@ function App() {
   useEffect(() => {
     fetchData();
   }, []);
+
+  const fetchRecords = () => {
+    const getDataFor = {
+      fromDate : fromDate,
+      toDate : toDate,
+      application: state.application,
+      dataset : state.dataset
+    }
+  }
 
   return (
     <Container maxWidth="xl">
@@ -134,8 +145,8 @@ function App() {
                     id="from-date-picker"
                     label="From Date"
                     format="dd/MM/yyyy"
-                    value={selectedDate}
-                    onChange={handleDateChange}
+                    value={toDate}
+                    onChange={handleFromDateChange}
                     KeyboardButtonProps={{
                       "aria-label": "From Date",
                     }}
@@ -147,8 +158,8 @@ function App() {
                     id="to-date-picker"
                     label="To Date"
                     format="dd/MM/yyyy"
-                    value={selectedDate}
-                    onChange={handleDateChange}
+                    value={fromDate}
+                    onChange={handleToDateChange}
                     KeyboardButtonProps={{
                       "aria-label": "To Date",
                     }}
@@ -190,6 +201,7 @@ function App() {
                     variant="contained"
                     color="primary"
                     style={{ height: "40px", marginTop: "20px" }}
+                    onClick={fetchRecords}
                   >
                     Submit
                   </Button>
