@@ -86,7 +86,18 @@ function App() {
   const [records, setRecords] = useState([]);
 
   async function fetchData() {
-    const res = await fetch("/dashboard");
+    const requestData = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        fromDate : fromDate,
+        toDate : toDate,
+        application: state.application,
+        dataset : state.dataset
+      })
+    };
+
+    const res = await fetch("/dashboard", requestData);
     const all_data = await res.json();
     let all_rows = [];
     const data = all_data["dashboard_data"];
@@ -113,14 +124,10 @@ function App() {
     fetchData();
   }, []);
 
-  const fetchRecords = () => {
-    const getDataFor = {
-      fromDate : fromDate,
-      toDate : toDate,
-      application: state.application,
-      dataset : state.dataset
-    }
-  }
+  // const fetchRecords = () => {
+
+
+  // }
 
   return (
     <Container maxWidth="xl">
@@ -201,7 +208,7 @@ function App() {
                     variant="contained"
                     color="primary"
                     style={{ height: "40px", marginTop: "20px" }}
-                    onClick={fetchRecords}
+                    onClick={fetchData}
                   >
                     Submit
                   </Button>
