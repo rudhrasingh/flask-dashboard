@@ -24,9 +24,9 @@ def dashboard():
     for  row in reader:
         dashboard_data.append(row)
 
-    select_app_data={'drop_list':['Transformation','Stage load','OPAL']}
+    drop_down_data={'application_list':['Transformation','Stage load','OPAL'],'dataset_list':['INT0030','INT0050','INT0060','INT0070','INT0080']}
 
-    full_data={'select_app_data':select_app_data,'dashboard_data':dashboard_data} #this has to be changed later
+    full_data={'drop_down_data':drop_down_data,'dashboard_data':dashboard_data} #this has to be changed later
 
     return (full_data)
 
