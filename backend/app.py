@@ -20,9 +20,10 @@ def dashboard():
     fieldnames = ('date','datasetname','source_filename','correlation_id',
                   'application','local_execution_id','tracking_step','record_count','status','message')
     reader = csv.DictReader( csvfile, fieldnames)
-
-    dashboard_data = json.dumps([row for row in reader])
-    return dashboard_data
+    dashboard_data=[]
+    for  row in reader:
+        dashboard_data.append(row)
+    return jsonify(dashboard_data)
 
 
 if __name__=='__main__':
