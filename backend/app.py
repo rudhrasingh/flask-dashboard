@@ -1,8 +1,12 @@
 from flask import Flask,redirect,url_for,render_template
 import json,csv
 from flask import jsonify
+from flask_cors import CORS
 
-app=Flask(__name__)
+app = Flask(__name__)
+app.debug = True
+CORS(app)
+
 
 @app.route('/')
 def index():
