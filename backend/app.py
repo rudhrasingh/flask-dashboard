@@ -1,5 +1,6 @@
 from flask import Flask,redirect,url_for,render_template
 import json,csv
+from flask import jsonify
 
 app=Flask(__name__)
 
@@ -12,13 +13,14 @@ def home():
 @app.route('/login',methods=['GET', 'POST'])
 def login():
     return render_template('login.html')
-@app.route('/dashboard',methods=['GET', 'POST'])
+@app.route('/dashboard',methods=['GET','POST'])
 def dashboard():
 
     csvfile = open('data.csv', 'r')
     fieldnames = ('date','datasetname','source_filename','correlation_id',
-                  'application','local_execution_id','tracking_step','record_count','status,message')
+                  'application','local_execution_id','tracking_step','record_count','status','message')
     reader = csv.DictReader( csvfile, fieldnames)
+
     dashboard_data = json.dumps([row for row in reader])
     return dashboard_data
 
