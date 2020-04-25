@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+
+<div class="d-flex justify-content-center align-items-center container ">
+
+    <div class="row ">
+
+
+        <form action="">
+            <div class="form-group">
+                <label for="inputUserName" class="control-label">UserName</label>
+                <input type="email" class="form-control" id="inputUserName" aria-labelledby="emailnotification">
+            </div>
+            <div class="form-group">
+                <label for="inputPassword" class="control-label">Password</label>
+                <input type="password" class="form-control" id="inputPassword" aria-labelledby="passwordnotification">
+
+
+            </div>
+            <button type="submit" class="btn btn-info">Submit</button>
+
+        </form>
+
+    </div>
+
+</div>
+{% endblock %}
