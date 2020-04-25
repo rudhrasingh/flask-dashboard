@@ -23,7 +23,12 @@ def dashboard():
     dashboard_data=[]
     for  row in reader:
         dashboard_data.append(row)
-    return jsonify(dashboard_data)
+
+    select_app_data={'drop_list':['Transformation','Stage load','OPAL']}
+
+    full_data={'select_app_data':select_app_data,'dashboard_data':dashboard_data} #this has to be changed later
+
+    return (full_data)
 
 
 if __name__=='__main__':
