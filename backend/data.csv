@@ -3,3 +3,43 @@
 25-APR-2020,INT0060,file_3,CORT_3,Stage load,,STG,0,FAILURE,message3
 25-APR-2020,INT0070,file_4,CORT_4,Transformation,,TRN,0,COMPLETED,message4
 25-APR-2020,INT0080,file_5,CORT_5,Stage load,,STG,0,COMPLETED,message5
+25-APR-2020,INT0030,file_1,CORT_1,Stage load,,STG,0,COMPLETED,message1
+25-APR-2020,INT0050,file_2,CORT_2,Transformation,,TRN,0,COMPLETED,message2
+26-APR-2020,INT0060,file_3,CORT_3,Stage load,,STG,0,FAILURE,message3
+21-APR-2020,INT0070,file_4,CORT_4,Transformation,,TRN,0,COMPLETED,message4
+25-APR-2020,INT0080,file_5,CORT_5,Stage load,,STG,0,COMPLETED,message5
+25-APR-2020,INT0030,file_1,CORT_1,Stage load,,STG,0,COMPLETED,message1
+16-APR-2020,INT0050,file_2,CORT_2,Transformation,,TRN,0,COMPLETED,message2
+25-APR-2020,INT0060,file_3,CORT_3,Stage load,,STG,0,FAILURE,message3
+25-APR-2020,INT0070,file_4,CORT_4,Transformation,,TRN,0,COMPLETED,message4
+25-APR-2020,INT0080,file_5,CORT_5,Stage load,,STG,0,COMPLETED,message5
+27-APR-2020,INT0030,file_1,CORT_1,Stage load,,STG,0,COMPLETED,message1
+25-APR-2020,INT0050,file_2,CORT_2,Transformation,,TRN,0,COMPLETED,message2
+25-APR-2020,INT0060,file_3,CORT_3,Stage load,,STG,0,FAILURE,message3
+25-APR-2020,INT0070,file_4,CORT_4,Transformation,,TRN,0,COMPLETED,message4
+23-APR-2020,INT0080,file_5,CORT_5,Stage load,,STG,0,COMPLETED,message5
+25-APR-2020,INT0030,file_1,CORT_1,Stage load,,STG,0,COMPLETED,message1
+25-APR-2020,INT0050,file_2,CORT_2,Transformation,,TRN,0,COMPLETED,message2
+24-APR-2020,INT0060,file_3,CORT_3,Stage load,,STG,0,FAILURE,message3
+25-APR-2020,INT0070,file_4,CORT_4,Transformation,,TRN,0,COMPLETED,message4
+25-APR-2020,INT0080,file_5,CORT_5,Stage load,,STG,0,COMPLETED,message5
+25-APR-2020,INT0030,file_1,CORT_1,Stage load,,STG,0,COMPLETED,message1
+25-APR-2020,INT0050,file_2,CORT_2,Transformation,,TRN,0,COMPLETED,message2
+25-APR-2020,INT0060,file_3,CORT_3,Stage load,,STG,0,FAILURE,message3
+25-APR-2020,INT0070,file_4,CORT_4,Transformation,,TRN,0,COMPLETED,message4
+25-APR-2020,INT0080,file_5,CORT_5,Stage load,,STG,0,COMPLETED,message5
+18-APR-2020,INT0030,file_1,CORT_1,Stage load,,STG,0,COMPLETED,message1
+25-APR-2020,INT0050,file_2,CORT_2,Transformation,,TRN,0,COMPLETED,message2
+25-APR-2020,INT0060,file_3,CORT_3,Stage load,,STG,0,FAILURE,message3
+25-APR-2020,INT0070,file_4,CORT_4,Transformation,,TRN,0,COMPLETED,message4
+25-APR-2020,INT0080,file_5,CORT_5,Stage load,,STG,0,COMPLETED,message5
+25-APR-2020,INT0030,file_1,CORT_1,Stage load,,STG,0,COMPLETED,message1
+25-APR-2020,INT0050,file_2,CORT_2,Transformation,,TRN,0,COMPLETED,message2
+25-APR-2020,INT0060,file_3,CORT_3,Stage load,,STG,0,FAILURE,message3
+25-APR-2020,INT0070,file_4,CORT_4,Transformation,,TRN,0,COMPLETED,message4
+25-APR-2020,INT0080,file_5,CORT_5,Stage load,,STG,0,COMPLETED,message5
+25-APR-2020,INT0030,file_1,CORT_1,Stage load,,STG,0,COMPLETED,message1
+10-APR-2020,INT0050,file_2,CORT_2,Transformation,,TRN,0,COMPLETED,message2
+25-APR-2020,INT0060,file_3,CORT_3,Stage load,,STG,0,FAILURE,message3
+25-APR-2020,INT0070,file_4,CORT_4,Transformation,,TRN,0,COMPLETED,message4
+25-APR-2020,INT0080,file_5,CORT_5,Stage load,,STG,0,COMPLETED,message5
