@@ -158,7 +158,7 @@ function App() {
                     id="from-date-picker"
                     label="From Date"
                     format="dd/MM/yyyy"
-                    value={toDate}
+                    value={fromDate}
                     onChange={handleFromDateChange}
                     KeyboardButtonProps={{
                       "aria-label": "From Date",
@@ -171,7 +171,7 @@ function App() {
                     id="to-date-picker"
                     label="To Date"
                     format="dd/MM/yyyy"
-                    value={fromDate}
+                    value={toDate}
                     onChange={handleToDateChange}
                     KeyboardButtonProps={{
                       "aria-label": "To Date",
