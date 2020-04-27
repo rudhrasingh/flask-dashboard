@@ -108,7 +108,7 @@ function App() {
     const data = all_data["dashboard_data"];
     setDropdownData({
       application_list : all_data["dropdown_data"]["application_list"],
-      dataset_list: all_data["dropdown_data"]["application_list"]
+      dataset_list: all_data["dropdown_data"]["dataset_list"]
     });
 
     data.map((row) => {

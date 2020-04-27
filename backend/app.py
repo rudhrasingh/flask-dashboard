@@ -28,13 +28,14 @@ def dashboard():
     """ this is the main api getting data from the react form and sending data back to react in json format """
 
     ''' below parameters will be used in sql query to filter data coming from the process_table in db'''
-    respone = request.json                   # getting the form data sent by form on the react front end
-    application = respone.get('application')
-    dataset = respone.get('dataset')
-    fromdate = respone.get('fromDate')
-    todate = respone.get('toDate')
-    print(application)
-    print(dataset)
+    if request.method == 'POST':
+        respone = request.json                   # getting the form data sent by form on the react front end
+        application = respone.get('application')
+        dataset = respone.get('dataset')
+        fromdate = respone.get('fromDate')
+        todate = respone.get('toDate')
+        print(application)
+        print(dataset)
 
     csvfile = open('data.csv', 'r')
     fieldnames = ('date','datasetname','source_filename',
