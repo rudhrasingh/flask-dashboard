@@ -39,15 +39,15 @@ def dashboard():
 
     csvfile = open('data.csv', 'r')
     fieldnames = ('date','datasetname','source_filename',
-                  'correlation_id','application','local_execution_id',
-                  'tracking_step','record_count','status','message')
+                  'userid','application','process_id',
+                  'step','record_count','status','message')
 
     reader = csv.DictReader( csvfile, fieldnames)
     dashboard_data = []
     for row in reader:
         dashboard_data.append(row)
-    application_list = ['Transformation','Stage load','OPAL'] # this list will be created from a table column in db
-    dataset_list = ['INT0030','INT0050','INT0060','INT0070','INT0080']  # this list will be created from a table column in db
+    application_list = ['Transformation','Stage load'] # this list will be created from a table column in db
+    dataset_list = ['DTST_1','DTST_2','DTST_3','DTST_4','DTST_5']  # this list will be created from a table column in db
     drop_down_data = {'application_list': application_list,'dataset_list': dataset_list}
 
     full_data={'dropdown_data':drop_down_data,'dashboard_data':dashboard_data} # this has to be changed later
